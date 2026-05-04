@@ -13,12 +13,6 @@
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
-# 修改ath11k-firmware
-#wget -O package/firmware/ath11k-firmware/Makefile https://raw.githubusercontent.com/robimarko/openwrt/ipq807x-5.15/package/firmware/ath11k-firmware/Makefile
-# 添加xiaomi系列
-#wget -O target/linux/ipq807x/image/generic.mk https://raw.githubusercontent.com/mitsukileung/Actions-OpenWrt/main/mi_patch/generic.mk
-
-#sed -i '1i src-git small https://github.com/kenzok8/small' feeds.conf.default
 ./scripts/feeds update -a
 git clone -b v5 https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
@@ -30,9 +24,3 @@ rm -rf feeds/packages/net/open-app-filter
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 ./scripts/feeds install -a
-
-# Add a feed source
-#echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
-#echo 'src-git routing https://github.com/coolsnowwolf/routing' >>feeds.conf.default
-#echo 'src-git telephony https://git.openwrt.org/feed/telephony.git' >>feeds.conf.default
