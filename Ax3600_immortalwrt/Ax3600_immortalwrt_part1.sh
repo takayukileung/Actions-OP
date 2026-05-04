@@ -25,9 +25,6 @@ git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 rm -rf feeds/packages/net/mosdns
 rm -rf feeds/packages/net/v2ray-geodata
 
-sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
-sed -i "s/luci-theme-bootstrap/luci-theme-aurora/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
-
 rm -rf feeds/luci/applications/luci-app-appfilter
 rm -rf feeds/packages/net/open-app-filter
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
