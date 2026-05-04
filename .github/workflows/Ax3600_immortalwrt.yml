@@ -31,9 +31,9 @@ env:
   REPO_URL: https://github.com/VIKINGYFY/immortalwrt.git
   REPO_BRANCH: main
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: Ax3600_immortalwrt.config
-  DIY_P1_SH: Ax3600_immortalwrt_part1.sh
-  DIY_P2_SH: Ax3600_immortalwrt_part2.sh
+  CONFIG_FILE: Ax3600_immortalwrt/Ax3600_immortalwrt.config
+  DIY_P1_SH: Ax3600_immortalwrt/Ax3600_immortalwrt_part1.sh
+  DIY_P2_SH: Ax3600_immortalwrt/Ax3600_immortalwrt_part2.sh
   RELEASE_TAG: Ax3600_immortalwrt_VIKINGYFY
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
