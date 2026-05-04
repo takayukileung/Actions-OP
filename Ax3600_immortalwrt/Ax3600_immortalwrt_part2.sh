@@ -26,7 +26,7 @@ wget -O package/geoview/Makefile https://raw.githubusercontent.com/xiaorouji/ope
 # 添加 luci-app-tailscale-community
 git clone https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community.git package/luci-app-tailscale-community
 
-# 添加 luci-theme-aurora luci-app-aurora-config
+# 添加 luci-theme-aurora 和 luci-app-aurora-config 并替换默认主题和修改样式
 git clone https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
 git clone https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app-aurora-config
 sed -i "s/luci-theme-bootstrap/luci-theme-aurora/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
