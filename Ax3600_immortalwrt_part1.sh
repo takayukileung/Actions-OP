@@ -14,6 +14,7 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 ./scripts/feeds update -a
+
 git clone -b v5 https://github.com/sbwml/luci-app-mosdns package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 rm -rf feeds/packages/net/mosdns
@@ -24,4 +25,3 @@ rm -rf feeds/packages/net/open-app-filter
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 ./scripts/feeds install -a
-
