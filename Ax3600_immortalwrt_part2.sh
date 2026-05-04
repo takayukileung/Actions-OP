@@ -49,3 +49,4 @@ git clone https://github.com/sirpdboy/luci-app-taskplan.git package/luci-app-tas
 echo 'refresh feeds'
 ./scripts/feeds update -a
 ./scripts/feeds install -a
+

@@ -24,3 +24,4 @@ rm -rf feeds/packages/net/open-app-filter
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 ./scripts/feeds install -a
+
