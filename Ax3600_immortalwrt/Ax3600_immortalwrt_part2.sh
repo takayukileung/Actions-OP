@@ -10,9 +10,13 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-# Modify default IP
+# 修改默认 IP
 sed -i 's/192.168.1.1/192.168.88.1/g' package/base-files/files/bin/config_generate
 
+# 删除 sysupgrade
+sed -i "/attendedsysupgrade/d" $(find ./feeds/luci/collections/ -type f -name "Makefile")
+
+# 修改 zerotier
 sed -i 's/8056c2e21c000001/9f77fc393e758059/g' feeds/packages/net/zerotier/files/etc/config/zerotier
 
 rm -rf feeds/packages/net/geoview
@@ -25,6 +29,7 @@ git clone https://github.com/Tokisaki-Galaxy/luci-app-tailscale-community.git pa
 # 添加 luci-theme-aurora luci-app-aurora-config
 git clone https://github.com/eamonxg/luci-theme-aurora.git package/luci-theme-aurora
 git clone https://github.com/eamonxg/luci-app-aurora-config.git package/luci-app-aurora-config
+sed -i "s/luci-theme-bootstrap/luci-theme-aurora/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 sed -i "s/nav_submenu_type '.*'/nav_submenu_type 'boxed-dropdown'/g" $(find ./package/luci-app-aurora-config/root/usr/share/aurora/ -type f -name "*.template")
 
 # 修改qca-nss-drv启动顺序
